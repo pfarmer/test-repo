@@ -5,7 +5,7 @@ name: testing
 
 steps:
 - name: testing
-  image: geekycode/code-quality
+  image: geekycode/python-generic
   environment:
     GITEA_PAT:
       from_secret: gitea_pat
