@@ -1,0 +1,16 @@
+---
+kind: pipeline
+type: docker
+name: testing
+
+steps:
+- name: testing
+  image: geekycode/code-quality
+  environment:
+    GITEA_PAT:
+      from_secret: gitea_pat
+  commands:
+  - ./success.py
+
+image_pull_secrets:
+- dockerconfig
